@@ -1,0 +1,17 @@
+1)View does not take any storage space only the query is stored int the data dictionary.
+2)insert,delete,update operations performed on a view will be reflected in the base table as well and vice versa .
+         **NOTE - POINT 2 IS TRUE ONLY IF THE VIEW IS MADE FROM SIMPLE QUERIES MEANS VIEWS HAVING GROUP BY,HAVING,ORDER BY,AGGREGATE FUNCTIONS
+                  JOINS CANNOT BE UPDATED. 
+3)ALTER STATEMENTS CANNOT BE USED.
+4)IF VIEWS ARE MADE FROM MULTIPLE TABLES THEN WE CANNOT PERFORM INSERT AND DELETE OPERATIONS ON THAT VIEW BUT CAN UPDATE IT.
+5)SYNTAX 
+         create view v5 
+         as select id,name,department,subject from student; //****NOTE- CAN USE WHERE CLAUSE IF REQUIRED. 
+6)SYNTAX TO CREATE A VIEW FROM MULTIPLE TABLES
+     ****create view v3 
+         as select description,s_order_no,product_rate from sales_order_details,product_master 
+         where sales_order_details.product_no= product_master.product_no;  ///*********WE NEED SOME COMMON ATTRIBUTE 
+7)WITH CHECK OPTION ENSURES ALL THE UPDATES AND INSERTS SATISFIES THE CONDITION INTHE VIEW DEFINITION. 
+
+
+  
